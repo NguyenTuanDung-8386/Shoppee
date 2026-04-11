@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * { box-sizing: border-box; }
+  body {
+    font-family: 'Nunito', sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-shopee-500 hover:bg-shopee-600 text-white font-semibold px-4 py-2 rounded transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+  .btn-outline {
+    @apply border border-shopee-500 text-shopee-500 hover:bg-shopee-50 font-semibold px-4 py-2 rounded transition-colors duration-200;
+  }
+  .input-field {
+    @apply w-full border border-gray-300 rounded px-3 py-2 text-sm focus:outline-none focus:border-shopee-500 focus:ring-1 focus:ring-shopee-200 transition;
+  }
+  .card {
+    @apply bg-white rounded-md shadow-sm hover:shadow-md transition-shadow duration-200;
+  }
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: #f1f1f1; }
+::-webkit-scrollbar-thumb { background: #ccc; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #ee4d2d; }
